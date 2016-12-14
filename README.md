@@ -13,3 +13,7 @@ Android Studio 1.2.0
 ## Usage
 
 Just import the whole project.
+
+## LICENSE
+
+GPL-3.0
