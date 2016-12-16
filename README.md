@@ -4,11 +4,11 @@ cooperated with SiriusTsou
 
 ## Environment
 
-Win7
+Win10
 
-jdk1.7.0_45
+jdk1.8.0_111
 
-Android Studio 1.2.0
+Android Studio 2.2.0
 
 ## Usage
 
