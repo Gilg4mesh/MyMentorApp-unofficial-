@@ -26,6 +26,7 @@ import com.example.mediaprojectv3.db.GeneralObligatoryEntity;
 import com.example.mediaprojectv3.db.SimpleEntity;
 import com.example.mediaprojectv3.db.TotalEntity;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
@@ -36,6 +37,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,8 +78,18 @@ public class MyMentor extends Activity {
 		progress.setMessage("Wait while loading...");
 		progress.setCanceledOnTouchOutside(false);
 
-		final Dialog progressState = new Dialog(this);
+
+		LayoutInflater.from(this);
+		android.app.AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+		dialog.setTitle("Done Loading !!!");
+		dialog.create();
+
+		final Dialog progressState = dialog.create();
 		progressState.setTitle("Done Loading !!!");
+
+		// final Dialog progressState =  new Dialog(this);
+		// progressState.setTitle("Done Loading !!!");
+
 
 		btn.setOnClickListener(new Button.OnClickListener() {
 			@Override
@@ -170,7 +182,7 @@ public class MyMentor extends Activity {
 			e.printStackTrace();
 		}
 
-		
+
 
 		// GET courseCreditStructure
 
