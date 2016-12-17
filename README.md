@@ -12,7 +12,9 @@ Android Studio 2.2.0
 
 ## Usage
 
-Just import the whole project.
+1.Import the whole project.
+
+2.Setup the firebase by Android Studio 2.2.0 from tools.
 
 ## LICENSE
 
