@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.mediaproject_v3"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 21
     }
 
@@ -20,7 +20,14 @@ android {
 
 dependencies {
     compile project(':library')
+    compile files('libs/jsoup-1.8.2.jar')
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:appcompat-v7:21.0.3'
-    compile files('libs/jsoup-1.8.2.jar')
+    compile 'com.google.firebase:firebase-database:10.0.1'
 }
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

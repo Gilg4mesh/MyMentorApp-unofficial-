@@ -36,15 +36,23 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.google.firebase.database.*;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class MyMentor extends Activity {
+	private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	private Button btn;
+	private CheckBox ios;
 	private EditText id, passwd;
 	@SuppressWarnings("unused")
 	private TextView text;
@@ -62,16 +70,19 @@ public class MyMentor extends Activity {
 	private static String s_temp_response = "";
 	private static String s_temp_params = "";
 	private static String s_temp_JSESSIONID = "";
+	private String android_id ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mymentor);
 
+		android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 		btn = (Button) findViewById(R.id.btn);
 		id = (EditText) findViewById(R.id.id0);
 		passwd = (EditText) findViewById(R.id.passwd0);
 		text = (TextView) findViewById(R.id.text0);
+		ios = (CheckBox) findViewById(R.id.ios);
 
 		final ProgressDialog progress = new ProgressDialog(this);
 		progress.setTitle("Loading");
@@ -94,9 +105,19 @@ public class MyMentor extends Activity {
 		btn.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
+
+
+
 				mConnectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 				mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
 				if (mNetworkInfo != null && mNetworkInfo.isConnected()) {
+					FirebaseDatabase database = FirebaseDatabase.getInstance();
+					final DatabaseReference myRef = database.getReference("Login");
+					Date date = new Date();
+					if ( ios.isChecked() )
+						myRef.child(android_id).child(sdf.format(date)).child(id.getText().toString()).setValue("iOS user");
+					else if ( !ios.isChecked() )
+						myRef.child(android_id).child(sdf.format(date)).child(id.getText().toString()).setValue("android user");
 
 					new AsyncTask<Void, Void, Void>() {
 

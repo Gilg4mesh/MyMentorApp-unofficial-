@@ -29,6 +29,12 @@
         android:inputType="textPassword"
         android:hint="********" />
 
+    <CheckBox
+        android:id="@+id/ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="我是iOS用戶我想順便許願" />
+
     <Button
         android:id="@+id/btn"
         android:layout_width="100dp"
@@ -40,7 +46,32 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="@string/mentor"
+        android:autoLink="web|email"
     />
+
+    <TextView android:id="@+id/git"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/git"
+        android:autoLink="web|email"
+        />
+
+    <TextView android:id="@+id/sourceNotice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/sourceNotice"
+        android:autoLink="web|email"
+        />
+
+    <TextView android:id="@+id/LICENSE"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="@string/LICENSE"
+        android:autoLink="web|email"
+        />
     
     
 

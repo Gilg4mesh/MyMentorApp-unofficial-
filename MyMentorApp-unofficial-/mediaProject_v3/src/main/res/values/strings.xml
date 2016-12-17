@@ -9,10 +9,15 @@
     <string name="title_section5">系上必修</string>
     <string name="title_section6">系上選修</string>
     <string name="mentor">
-        此 App 非官方 App\n
-        若登入後沒有顯示資料，可能是密碼錯誤或是中原大學Mymentor網頁有問題。\n\n
-        有興趣協助開發請至 https://github.com/freedomtomdestiny/MyMentorApp-unofficial- \n
-        本專案因涉及隱私及資訊安全故採用 GPL3.0 LICENSE 以避免此小型開發被惡意植入\n\n
+
+        此 App 非官方 App。( 剛學時的練習別嘴別嘴 )\n
+        若登入後沒有顯示資料，可能是密碼錯誤或是來源網頁有問題。\n\n
+        有興趣協助開發請至 :
+    </string>
+    <string name="git"> https://github.com/freedomtomdestiny/MyMentorApp-unofficial-</string>
+    <string name="sourceNotice">同時，下載非上述連結提供之App造成資料外洩請自行負責。\n</string>
+    <string name="LICENSE">
+        本專案因涉及隱私及資訊安全故採用 GPL3.0 LICENSE 公開透明以證此小型開發無惡意植入。\n\n
         GPL3.0 重點為：\n
         1.以此程式延伸之程式必須同樣為 GPL3.0 LICENSE\n
         2.以此程式延伸之程式必須開源\n
@@ -23,6 +28,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">登入帳號</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">課程大綱連結</string>
 
 </resources>
