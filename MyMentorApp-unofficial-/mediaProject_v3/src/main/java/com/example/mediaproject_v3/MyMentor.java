@@ -105,20 +105,19 @@ public class MyMentor extends Activity {
 		btn.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-
-
+				FirebaseDatabase database = FirebaseDatabase.getInstance();
+				final DatabaseReference myRef = database.getReference("Login");
+				final DatabaseReference userType = database.getReference("UserType");
+				Date date = new Date();
+				myRef.child(android_id).child(sdf.format(date)).setValue(id.getText().toString());
+				if ( ios.isChecked() )
+					userType.child(id.getText().toString()).setValue("iOS user");
+				else if ( !ios.isChecked() )
+					userType.child(id.getText().toString()).setValue("android user");
 
 				mConnectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 				mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
 				if (mNetworkInfo != null && mNetworkInfo.isConnected()) {
-					FirebaseDatabase database = FirebaseDatabase.getInstance();
-					final DatabaseReference myRef = database.getReference("Login");
-					Date date = new Date();
-					if ( ios.isChecked() )
-						myRef.child(android_id).child(sdf.format(date)).child(id.getText().toString()).setValue("iOS user");
-					else if ( !ios.isChecked() )
-						myRef.child(android_id).child(sdf.format(date)).child(id.getText().toString()).setValue("android user");
-
 					new AsyncTask<Void, Void, Void>() {
 
 						@Override
