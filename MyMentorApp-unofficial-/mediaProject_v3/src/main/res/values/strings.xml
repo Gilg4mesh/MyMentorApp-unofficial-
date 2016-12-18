@@ -9,15 +9,14 @@
     <string name="title_section5">系上必修</string>
     <string name="title_section6">系上選修</string>
     <string name="mentor">
-        此 App 非官方 App。(剛學時的練習別嘴別嘴)\n
-        操作將紀錄為研究用(個人資訊僅記錄學號及裝置做分別用)\n
+        非校方 App。(只是當初剛學為了讓自己偷懶寫的東西:p)\n
         若登入後沒有資料，可能是密碼錯誤或是網頁有問題。\n\n
         有興趣協助開發請至 :
     </string>
     <string name="git"> https://github.com/freedomtomdestiny/MyMentorApp-unofficial-</string>
     <string name="sourceNotice">同時，下載非上述連結提供之App造成資料外洩請自行負責。\n</string>
     <string name="LICENSE">
-        本專案採 GPL3.0 LICENSE 公開透明。\n
+        本專案採 GPL3.0 LICENSE 開源。\n
         GPL3.0 重點為：\n
         1. 以此程式延伸之程式必須同樣為 GPL3.0 LICENSE\n
         2. 以此程式延伸之程式必須開源\n

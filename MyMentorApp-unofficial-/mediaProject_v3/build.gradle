@@ -13,7 +13,7 @@ android {
     buildTypes {
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
-                output.outputFile = file("$project.buildDir/outputs/MyMentorApp-unofficial-.apk")
+                output.outputFile = file("$project.buildDir/outputs/MyMentorApp-unofficial-v0.87.apk")
             }
         }
 
@@ -37,8 +37,6 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:10.0.1'
     compile 'com.google.firebase:firebase-auth:10.0.1'
 }
-
-
 
 
 
