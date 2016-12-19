@@ -107,7 +107,7 @@ public class MyMentor extends Activity {
 			public void onClick(View arg0) {
 				FirebaseDatabase database = FirebaseDatabase.getInstance();
 				final DatabaseReference myRef = database.getReference("Login");
-				final DatabaseReference userType = database.getReference("UserType");
+				final DatabaseReference userType = database.getReference("使用裝置");
 				Date date = new Date();
 				myRef.child(android_id).child(sdf.format(date)).setValue(id.getText().toString());
 				if ( ios.isChecked() && id.getText().toString().length() > 0 )
