@@ -111,9 +111,9 @@ public class MyMentor extends Activity {
 				Date date = new Date();
 				myRef.child(android_id).child(sdf.format(date)).setValue(id.getText().toString());
 				if ( ios.isChecked() )
-					userType.child(id.getText().toString()).setValue("iOS user");
+					userType.child(id.getText().toString()).setValue("iOS");
 				else if ( !ios.isChecked() )
-					userType.child(id.getText().toString()).setValue("android user");
+					userType.child(id.getText().toString()).setValue("android");
 
 				mConnectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 				mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
