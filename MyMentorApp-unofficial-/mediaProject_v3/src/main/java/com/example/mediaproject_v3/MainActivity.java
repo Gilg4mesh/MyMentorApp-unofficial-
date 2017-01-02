@@ -204,6 +204,32 @@ public class MainActivity extends ActionBarActivity implements
 			return true;
 		}
 
+		if (id == R.id.coursewiki) {
+			FirebaseDatabase database = FirebaseDatabase.getInstance();
+			final DatabaseReference Coursewiki = database.getReference("選課大全");
+			Date date = new Date();
+			Coursewiki.child(android_id).child(sdf.format(date)).setValue("");
+			Uri uri=Uri.parse("https://coursewiki.clouder.today/");
+			Intent i=new Intent(Intent.ACTION_VIEW,uri);
+			startActivity(i);
+
+			return true;
+		}
+
+		if (id == R.id.fanpage) {
+			FirebaseDatabase database = FirebaseDatabase.getInstance();
+			final DatabaseReference Fanpage = database.getReference("下載更新");
+			Date date = new Date();
+			Fanpage.child(android_id).child(sdf.format(date)).setValue("");
+			Uri uri=Uri.parse("https://www.facebook.com/mymentorappunofficial/");
+			Intent i=new Intent(Intent.ACTION_VIEW,uri);
+			startActivity(i);
+
+			return true;
+		}
+
+
+
 		if (item.getItemId() == R.id.action_example) {
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, MyMentor.class);

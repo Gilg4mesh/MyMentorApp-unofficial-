@@ -12,5 +12,15 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/coursewiki"
+        android:orderInCategory="100"
+        android:title="@string/coursewiki"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/fanpage"
+        android:orderInCategory="100"
+        android:title="@string/fanpage"
+        app:showAsAction="never"/>
 
 </menu>

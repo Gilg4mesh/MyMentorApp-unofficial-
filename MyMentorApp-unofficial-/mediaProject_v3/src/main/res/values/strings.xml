@@ -28,5 +28,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">登入帳號</string>
     <string name="action_settings">課程大綱連結</string>
+    <string name="coursewiki">選課大全連結</string>
+    <string name="fanpage">粉絲專業連結</string>
 
 </resources>
